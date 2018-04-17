@@ -48,6 +48,10 @@ class List extends React.Component {
             return <div className="Loading-container"><Loading /></div>
         }
 
+        if (this.state.error) {
+            return <div className="Error">{this.state.error}</div>
+        }
+
         return (
             <div className="Table-container">
                 <table className="table">
